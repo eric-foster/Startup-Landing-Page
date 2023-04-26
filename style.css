@@ -1,0 +1,232 @@
+* {
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: rgb(211, 203, 198);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(175, 157, 147);
+    scroll-behavior: smooth;
+}
+
+/* Nav Section */
+.navbar{
+    display: block;
+    align-content: center;
+    margin: 1rem 2rem;
+    font-size: 1.25rem;
+    overflow: hidden;
+}
+
+.navbar-img img{
+    width: 200px;
+    height: 100%;
+}
+
+nav ul{
+    display: flex;
+    float: right;
+}
+
+nav ul .nav-link {
+    color: rgb(223, 215, 211);
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px;
+    background-color: rgb(160, 137, 125);
+    border: 2px solid rgb(160, 137, 125);
+    border-radius: 5px;
+}
+
+nav ul .nav-link:hover {
+    color: rgb(223, 215, 211);
+    background-color: rgb(189, 164, 152);
+    border: 2px solid rgb(189, 164, 152);
+    border-radius: 5px;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: rgb(223, 215, 211);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 700px){
+
+    nav ul li {
+        font-size: 2rem;
+        margin: 30px 0;
+        padding: 0;
+        /* line-height: 30px; */
+    }
+
+    nav ul li .nav-link{
+        background-color: rgb(175, 157, 147);
+        border: none;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    nav.navbar ul {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(175, 157, 147);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    #check:checked ~ ul {
+    left: 0;
+
+    }
+}
+
+/* Header Section */
+.slogan-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(160, 137, 125);
+    height: auto;
+    block-size: 25%;
+    margin: 0;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(122, 100, 89);
+    height: auto;
+}
+
+.about h1 {
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.about p {
+    font-size: 1.25rem;
+    line-height: 35px;
+    padding: 0 100px;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+    background-color: rgb(138, 112, 101);
+    height: auto;
+    font-size: 1.75rem;
+}
+
+.gallery h1 {
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Subscribe Section */
+
+.form-section {
+    background-color: rgb(128, 100, 88);
+    padding: 50px;
+    color: white;
+}
+
+.form-section h2 {
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+textarea {
+    height: 150px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: white;
+    color: rgb(128, 100, 88);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
